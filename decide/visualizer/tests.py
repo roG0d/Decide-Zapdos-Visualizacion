@@ -1,12 +1,5 @@
-
-# Create your tests here.
-from django.test import TestCase
 from selenium import webdriver
-from selenium.webdriver.common.action_chains import ActionChains
-import requests
-import unittest
 import re
-import math
 
 
 
@@ -32,7 +25,8 @@ def voting_id_is_positive():
 	print('Criterio para el id superado : ' + str(verification))
 
 
-''' Descomentar para probar las pruebas que aparecen acontinuación
+''' 
+Descomentar para probar las pruebas que aparecen acontinuación
 
 voting_id_is_positive()
 
