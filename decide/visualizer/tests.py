@@ -112,7 +112,26 @@ def prueba_enviar_email_mal():
 
         driver.quit()
 
+def prueba_porcentaje():
+ driver = webdriver.Chrome(executable_path="./chromedriver_ubuntu")
+ driver.get("http://localhost:8000/visualizer/3")
+ element = (driver.find_element_by_xpath("/html/body/div/section/div[2]/div[2]/p/p2[1]"))
+ verification = (element.text).startswith('0')
+ 
+ print("prueba de que salen los porcentajes :  " +  str(verification) )
 
+
+def prueba_porcentaje_mal():
+ driver = webdriver.Chrome(executable_path="./chromedriver_ubuntu")
+ driver.get("http://localhost:8000/visualizer/3")
+ element = (driver.find_element_by_xpath("/html/body/div/section/div[2]/div[2]/p/p2[1]"))
+ verification = (element.text).startswith(' ')
+ 
+ print("prueba de que no se ven los porcentajes : " +  str(verification) )
+
+	
+#prueba_porcentaje()  
+#prueba_porcentaje_mal() 
 #pruebaPDFCSV()
 #prueba_enviar_email_correcto()
 #prueba_enviar_email_mal()
